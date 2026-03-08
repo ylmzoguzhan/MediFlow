@@ -1,5 +1,6 @@
 using FluentValidation;
 using MediatR;
+using MediFlow.Modules.Patients.GetPatientDetails;
 using MediFlow.Modules.Patients.Infrastructure.Persistence;
 using MediFlow.Modules.Patients.RegisterPatient;
 using Microsoft.AspNetCore.Builder;
@@ -33,6 +34,7 @@ public static class PatientsModule
     public static IEndpointRouteBuilder MapPatientsEndpoints(this IEndpointRouteBuilder app)
     {
         app.MapRegisterPatientEndpoint();
+        app.MapGetPatientDetailsEndpoint();
         return app;
     }
 }
