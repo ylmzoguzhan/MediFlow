@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MediFlow.Api/MediFlow.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/">
+    <Project Path="src/Modules/MediFlow.Modules.Patients/MediFlow.Modules.Patients.csproj" />
+  </Folder>
+</Solution>
