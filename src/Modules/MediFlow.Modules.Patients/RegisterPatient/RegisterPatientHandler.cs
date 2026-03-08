@@ -12,7 +12,7 @@ public class RegisterPatientHandler(PatientsDbContext dbContext) : IRequestHandl
         var existing = await dbContext.Patients.AnyAsync(op => op.Email == command.Email);
         if (existing)
             return Result.Failure<RegisterPatientResponse>(PatientErrors.EmailAlreadyExists);
-        var patient = new Patient(command.FirstName, command.LastName, command.Email, command.DateOfBirth);
+        var patient = new Patient(command.FirstName, command.LastName, command.Email, command.PhoneNumber, command.DateOfBirth);
         await dbContext.Patients.AddAsync(patient);
         await dbContext.SaveChangesAsync();
         return Result.Success<RegisterPatientResponse>(new RegisterPatientResponse(patient.Id));

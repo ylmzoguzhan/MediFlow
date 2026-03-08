@@ -3,6 +3,7 @@ using MediatR;
 using MediFlow.Modules.Patients.GetPatientDetails;
 using MediFlow.Modules.Patients.Infrastructure.Persistence;
 using MediFlow.Modules.Patients.RegisterPatient;
+using MediFlow.Modules.Patients.UpdatePatient;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
@@ -35,6 +36,7 @@ public static class PatientsModule
     {
         app.MapRegisterPatientEndpoint();
         app.MapGetPatientDetailsEndpoint();
+        app.MapUpdatePatientContactInfoEndpoint();
         return app;
     }
 }

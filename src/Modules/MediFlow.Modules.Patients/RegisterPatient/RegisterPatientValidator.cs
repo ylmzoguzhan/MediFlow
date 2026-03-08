@@ -9,6 +9,7 @@ public class RegisterPatientValidator : AbstractValidator<RegisterPatientCommand
         RuleFor(op => op.FirstName).NotEmpty();
         RuleFor(op => op.LastName).NotEmpty();
         RuleFor(op => op.Email).NotEmpty().EmailAddress();
+        RuleFor(op => op.PhoneNumber).NotEmpty();
         RuleFor(x => x.DateOfBirth).LessThanOrEqualTo(DateTime.Today);
     }
 }
