@@ -1,3 +1,4 @@
+using BuildingBlocks;
 using MediatR;
 using MediFlow.Modules.Patients.Domain;
 using MediFlow.Modules.Patients.Infrastructure.Persistence;

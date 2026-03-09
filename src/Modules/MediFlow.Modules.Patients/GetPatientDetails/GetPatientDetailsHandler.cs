@@ -1,3 +1,4 @@
+using BuildingBlocks;
 using FluentValidation;
 using MediatR;
 using MediFlow.Modules.Patients.Domain;

@@ -1,8 +1,10 @@
 using FluentValidation;
 using MediatR;
 using MediFlow.Modules.Patients.GetPatientDetails;
+using MediFlow.Modules.Patients.GetPatients;
 using MediFlow.Modules.Patients.Infrastructure.Persistence;
 using MediFlow.Modules.Patients.RegisterPatient;
+using MediFlow.Modules.Patients.SearchPatients;
 using MediFlow.Modules.Patients.UpdatePatient;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
@@ -36,7 +38,9 @@ public static class PatientsModule
     {
         app.MapRegisterPatientEndpoint();
         app.MapGetPatientDetailsEndpoint();
-        app.MapUpdatePatientContactInfoEndpoint();
+        app.MapUpdatePatientProfileEndpoint();
+        app.MapListPatientsEndpoint();
+        app.MapSearchPatientsEndpoint();
         return app;
     }
 }

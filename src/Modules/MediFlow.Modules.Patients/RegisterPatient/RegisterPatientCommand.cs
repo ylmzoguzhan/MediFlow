@@ -1,3 +1,4 @@
+using BuildingBlocks;
 using MediatR;
 
 namespace MediFlow.Modules.Patients.RegisterPatient;

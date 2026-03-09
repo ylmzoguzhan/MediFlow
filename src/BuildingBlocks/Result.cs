@@ -1,4 +1,5 @@
-namespace MediFlow.Modules.Patients;
+namespace BuildingBlocks;
+
 
 public class Result
 {
