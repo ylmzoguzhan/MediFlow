@@ -4,6 +4,7 @@
     <Project Path="src/MediFlow.Api/MediFlow.Api.csproj" />
   </Folder>
   <Folder Name="/src/Modules/">
+    <Project Path="src/Modules/MediFlow.Modules.Patients.Tests/MediFlow.Modules.Patients.Tests.csproj" />
     <Project Path="src/Modules/MediFlow.Modules.Patients/MediFlow.Modules.Patients.csproj" />
   </Folder>
 </Solution>
