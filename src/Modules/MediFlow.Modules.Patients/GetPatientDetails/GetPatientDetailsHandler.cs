@@ -1,9 +1,3 @@
-using BuildingBlocks;
-using FluentValidation;
-using MediatR;
-using MediFlow.Modules.Patients.Domain;
-using MediFlow.Modules.Patients.Infrastructure.Persistence;
-
 namespace MediFlow.Modules.Patients.GetPatientDetails;
 
 public class GetPatientDetailsValidator : AbstractValidator<GetPatientDetailsQuery>

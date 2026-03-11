@@ -6,5 +6,6 @@
   <Folder Name="/src/Modules/">
     <Project Path="src/Modules/MediFlow.Modules.Patients.Tests/MediFlow.Modules.Patients.Tests.csproj" />
     <Project Path="src/Modules/MediFlow.Modules.Patients/MediFlow.Modules.Patients.csproj" />
+    <Project Path="src/Modules/MediFlow.Modules.Practitioners/MediFlow.Modules.Practitioners.csproj" />
   </Folder>
 </Solution>

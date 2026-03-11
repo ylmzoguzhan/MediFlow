@@ -1,9 +1,3 @@
-using BuildingBlocks;
-using MediatR;
-using MediFlow.Modules.Patients.Domain;
-using MediFlow.Modules.Patients.Infrastructure.Persistence;
-using Microsoft.EntityFrameworkCore;
-
 namespace MediFlow.Modules.Patients.GetPatients;
 
 public record ListPatientsQuery(int Page = 1, int PageSize = 10) : IRequest<Result<ListItem<PatientItem>>>;

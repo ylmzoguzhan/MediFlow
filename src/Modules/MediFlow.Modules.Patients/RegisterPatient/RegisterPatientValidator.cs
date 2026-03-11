@@ -1,5 +1,3 @@
-using FluentValidation;
-
 namespace MediFlow.Modules.Patients.RegisterPatient;
 
 public class RegisterPatientValidator : AbstractValidator<RegisterPatientCommand>

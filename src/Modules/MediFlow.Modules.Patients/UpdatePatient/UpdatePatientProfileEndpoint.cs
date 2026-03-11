@@ -1,8 +1,3 @@
-using MediatR;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Routing;
-
 namespace MediFlow.Modules.Patients.UpdatePatient;
 
 public record UpdatePatientProfileRequest(string FirstName, string LastName, string PhoneNumber, DateTime DateOfBirth);

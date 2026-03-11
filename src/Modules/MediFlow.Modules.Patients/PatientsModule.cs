@@ -1,3 +1,4 @@
+using BuildingBlocks.Infrastructure.Persistence.Interceptors;
 using FluentValidation;
 using MediatR;
 using MediFlow.Modules.Patients.GetPatientDetails;
@@ -9,6 +10,7 @@ using MediFlow.Modules.Patients.UpdatePatient;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -18,16 +20,18 @@ public static class PatientsModule
 {
     public static IServiceCollection AddPatientsModule(this IServiceCollection services, IConfiguration configuration)
     {
-        var connectionString = configuration.GetConnectionString("PatientsDb");
-        services.AddDbContext<PatientsDbContext>(options =>
+        var connectionString = configuration.GetConnectionString("DefaultDb");
+        services.AddDbContext<PatientsDbContext>((sp, options) =>
         {
-            options.UseNpgsql(connectionString);
+            var interceptors = sp.GetServices<ISaveChangesInterceptor>();
+            options.UseNpgsql(connectionString).AddInterceptors(interceptors);
         });
         services.AddMediatR(cfg =>
         {
             cfg.RegisterServicesFromAssembly(typeof(PatientsModule).Assembly);
         });
         services.AddValidatorsFromAssembly(typeof(PatientsModule).Assembly);
+        services.AddScoped<ISaveChangesInterceptor, AuditableEntitiesInterceptor>();
         services.AddTransient(
     typeof(IPipelineBehavior<,>),
     typeof(ValidationBehavior<,>)

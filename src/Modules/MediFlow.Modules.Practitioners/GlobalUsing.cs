@@ -1,0 +1,11 @@
+global using MediatR;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Routing;
+global using BuildingBlocks;
+global using FluentValidation;
+global using MediFlow.Modules.Practitioners.Domain.Practitioner;
+global using MediFlow.Modules.Practitioners.Infrastructure.Persistence;
+global using MediFlow.Modules.Practitioners.Domain.Specialty;
+global using Microsoft.EntityFrameworkCore;
+global using MediFlow.Modules.Practitioners.Domain;

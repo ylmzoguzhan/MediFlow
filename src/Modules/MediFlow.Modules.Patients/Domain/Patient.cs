@@ -1,8 +1,7 @@
 namespace MediFlow.Modules.Patients.Domain;
 
-public class Patient
+public class Patient : BaseEntity
 {
-    public Guid Id { get; private set; }
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
     public string Email { get; private set; }

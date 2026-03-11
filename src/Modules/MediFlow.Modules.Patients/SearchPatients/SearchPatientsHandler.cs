@@ -1,10 +1,3 @@
-using BuildingBlocks;
-using FluentValidation;
-using MediatR;
-using MediFlow.Modules.Patients.GetPatients;
-using MediFlow.Modules.Patients.Infrastructure.Persistence;
-using Microsoft.EntityFrameworkCore;
-
 namespace MediFlow.Modules.Patients.SearchPatients;
 
 public class SearchPatientsValidator : AbstractValidator<SearchPatientsQuery>

@@ -1,10 +1,3 @@
-using BuildingBlocks;
-using FluentValidation;
-using MediatR;
-using MediFlow.Modules.Patients.Domain;
-using MediFlow.Modules.Patients.Infrastructure.Persistence;
-using Microsoft.EntityFrameworkCore;
-
 namespace MediFlow.Modules.Patients.UpdatePatient;
 
 public class UpdatePatientProfileValidator : AbstractValidator<UpdatePatientProfileCommand>

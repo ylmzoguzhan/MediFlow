@@ -1,4 +1,3 @@
-using BuildingBlocks;
 namespace MediFlow.Modules.Patients.Domain;
 
 public static class PatientErrors

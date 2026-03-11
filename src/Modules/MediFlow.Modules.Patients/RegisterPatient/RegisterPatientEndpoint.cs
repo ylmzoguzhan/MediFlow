@@ -1,9 +1,3 @@
-using MediatR;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Routing;
-
 namespace MediFlow.Modules.Patients.RegisterPatient;
 
 public static class RegisterPatientEndpoint

@@ -1,6 +1,3 @@
-using BuildingBlocks;
-using MediatR;
-
 namespace MediFlow.Modules.Patients.RegisterPatient;
 
 public record RegisterPatientCommand(
