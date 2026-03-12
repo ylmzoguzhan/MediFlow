@@ -1,6 +1,9 @@
+using BuildingBlocks.Domain;
+using MediFlow.Modules.Practitioners.Contracts;
+
 namespace MediFlow.Modules.Practitioners.Domain.Practitioner;
 
-public class Practitioner : BaseEntity
+public class Practitioner : AggregateRoot
 {
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
@@ -9,7 +12,6 @@ public class Practitioner : BaseEntity
     public string PhoneNumber { get; private set; }
 
     public Guid SpecialtyId { get; private set; }
-
 
     public bool IsActive { get; private set; }
 
@@ -39,8 +41,9 @@ public class Practitioner : BaseEntity
         if (string.IsNullOrEmpty(phoneNumber))
             return Result<Practitioner>.Failure(PractitionerError.PhoneNumberRequired);
         if (specialtyId == Guid.Empty)
-            return Result<Practitioner>.Failure(PractitionerError.PhoneNumberRequired);
+            return Result<Practitioner>.Failure(PractitionerError.SpecialtyIdRequired);
         var practitioner = new Practitioner(firstName, lastName, email, phoneNumber, specialtyId);
+        practitioner.AddDomainEvent(new PractitionerCreatedDomainEvent(practitioner.Id, practitioner.IsActive));
         return Result<Practitioner>.Success(practitioner);
     }
     public void Deactivate()

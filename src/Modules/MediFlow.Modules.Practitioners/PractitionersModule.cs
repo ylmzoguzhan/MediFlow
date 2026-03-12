@@ -27,6 +27,7 @@ public static class PractitionersModule
         });
         services.AddValidatorsFromAssembly(typeof(PractitionersModule).Assembly);
         services.AddScoped<ISaveChangesInterceptor, AuditableEntitiesInterceptor>();
+        services.AddScoped<ISaveChangesInterceptor, DispatchDomainEventsInterceptor>();
         services.AddTransient(
 typeof(IPipelineBehavior<,>),
 typeof(ValidationBehavior<,>)

@@ -1,7 +1,3 @@
-using MediFlow.Modules.Practitioners.Domain.Practitioner;
-using MediFlow.Modules.Practitioners.Domain.Specialty;
-using Microsoft.EntityFrameworkCore;
-
 namespace MediFlow.Modules.Practitioners.Infrastructure.Persistence;
 
 public class PractitionersDbContext : DbContext

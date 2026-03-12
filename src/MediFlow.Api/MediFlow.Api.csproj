@@ -16,5 +16,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Modules\MediFlow.Modules.Patients\MediFlow.Modules.Patients.csproj" />
     <ProjectReference Include="..\Modules\MediFlow.Modules.Practitioners\MediFlow.Modules.Practitioners.csproj" />
+    <ProjectReference Include="..\Modules\MediFlow.Modules.Scheduling\MediFlow.Modules.Scheduling.csproj" />
   </ItemGroup>
 </Project>

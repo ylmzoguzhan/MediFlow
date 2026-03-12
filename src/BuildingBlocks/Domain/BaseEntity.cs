@@ -1,6 +1,8 @@
+using BuildingBlocks.Domain;
+
 namespace BuildingBlocks;
 
-public class BaseEntity
+public abstract class BaseEntity
 {
     public Guid Id { get; set; }
     public DateTime CreatedAtUtc { get; set; }
